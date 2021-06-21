@@ -1,3 +1,3 @@
 # kokoa clone 2021
 
-HTML & CSS got so much fun!
+HTML & CSS are so much fun!
