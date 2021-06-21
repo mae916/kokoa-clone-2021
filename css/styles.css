@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import "reset.css";
+@import "variables.css";
+@import "status-bar.css";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.welcome-header {
+    margin: 90px 0;    /* 위아래 마진 재 봤을때 같음. */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600; /*위에 @import url에 추가한 font를 보면 400(레귤러)와 600(세미볼드)가 있음. 600을 넣어주면됨. */
+}
+.welcome-header__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.welcome-header__text {
+    width: 60%; /* 줄바꿈 있음-(밑의 콘텐츠와 달리 좌우 여백이 큼.) width를 써서 너비를 좁게 만들어 나머지 글을 밑으로 내려가게 하고, 중앙정렬이 안되기 때문에 전체 부모태그(welcome-header")에 flex,wrap를 써주어야함 */
+    opacity: 0.7;    /* 회색처럼 보이게 할때 투명도 */
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+}
+#login-form input {
+    border: none;
+    padding: 15px 0px;
+    font-size: 18px;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.2); /* rgba->중 a는 투명도, 그래서 마지막 0.2는 opacity값임. */
+    margin-bottom: 25px;
+    transition: border-color .3s ease-in-out;
+}
+#login-form input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+#login-form input:focus {
+    border-color: var(--yellow);
+}
